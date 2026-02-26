@@ -242,6 +242,13 @@
   .available-card {
     grid-template-columns: 1fr;
     gap: 28px;
+    padding-bottom: 64px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+  }
+
+  .available-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
   .available-card:nth-child(even) {
@@ -258,6 +265,7 @@
 
   .available-card-images {
     aspect-ratio: 4/3;
+    border-radius: 4px;
   }
 
   .available-card-desc {
@@ -281,8 +289,32 @@
     padding: 0 16px;
   }
 
+  .available-grid {
+    gap: 40px;
+  }
+
+  .available-card {
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.015);
+    padding: 16px;
+    padding-bottom: 32px;
+    border: 1px solid rgba(201, 169, 110, 0.1);
+    border-radius: 6px;
+  }
+
+  .available-card:last-child {
+    border: 1px solid rgba(201, 169, 110, 0.1);
+    padding-bottom: 32px;
+  }
+
+  .available-card-images {
+    aspect-ratio: 1;
+    border-radius: 4px;
+  }
+
   .available-card-title {
     font-size: 1.7rem;
+    margin-top: 4px;
   }
 
   .available-card-meta {
@@ -292,6 +324,8 @@
   .available-card-price {
     font-size: 1.4rem;
     margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(201, 169, 110, 0.12);
   }
 
   .available-card-desc {
@@ -310,17 +344,9 @@
     padding-right: 28px;
   }
 
-  .available-grid {
-    gap: 48px;
-  }
-
-  .available-card-images {
-    aspect-ratio: 1;
-  }
-
   .form-group input,
   .form-group textarea {
-    font-size: 16px; /* prevents iOS zoom on focus */
+    font-size: 16px;
     padding: 14px 16px;
   }
 }
@@ -339,11 +365,13 @@
   }
 
   .available-grid {
-    gap: 40px;
+    gap: 32px;
   }
 
   .available-card {
     gap: 20px;
+    padding: 12px;
+    padding-bottom: 28px;
   }
 
   .available-card-title {
@@ -383,11 +411,13 @@
   }
 
   .available-grid {
-    gap: 32px;
+    gap: 28px;
   }
 
   .available-card {
     gap: 16px;
+    padding: 10px;
+    padding-bottom: 24px;
   }
 
   .available-card-title {

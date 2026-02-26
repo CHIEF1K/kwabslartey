@@ -1,0 +1,462 @@
+/* ===== Page Header ===== */
+.page-header {
+  padding: 160px 0 80px;
+  text-align: center;
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+}
+
+.page-header-sub {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.page-header-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ===== Available Works Grid ===== */
+.available-section {
+  background: var(--color-bg);
+}
+
+.available-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.available-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.available-card:nth-child(even) {
+  direction: rtl;
+}
+
+.available-card:nth-child(even) > * {
+  direction: ltr;
+}
+
+/* Image hover swap */
+.available-card-images {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.available-img-main,
+.available-img-hover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.available-img-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.available-card-images:hover .available-img-hover {
+  opacity: 1;
+}
+
+.available-card-images:hover .available-img-main {
+  opacity: 0;
+}
+
+/* Card Info */
+.available-card-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.available-card-meta {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 16px;
+}
+
+.available-card-price {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-white);
+  margin-bottom: 20px;
+}
+
+.available-card-desc {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.btn-inquire {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* ===== Modal ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  padding: 48px 40px;
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  color: var(--color-white);
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.modal-title span {
+  color: var(--color-accent);
+}
+
+.modal-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(154, 149, 144, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-submit {
+  width: 100%;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: 1px solid var(--color-accent);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: var(--color-accent-light);
+  border-color: var(--color-accent-light);
+  color: var(--color-bg);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .available-card {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .available-card:nth-child(even) {
+    direction: ltr;
+  }
+
+  .available-grid {
+    gap: 64px;
+  }
+
+  .page-header {
+    padding: 130px 0 50px;
+  }
+
+  .available-card-images {
+    aspect-ratio: 4/3;
+  }
+
+  .available-card-desc {
+    font-size: 0.88rem;
+  }
+
+  .btn-inquire {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .page-header {
+    padding: 120px 0 44px;
+  }
+
+  .page-header-sub {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    padding: 0 16px;
+  }
+
+  .available-card-title {
+    font-size: 1.7rem;
+  }
+
+  .available-card-meta {
+    font-size: 0.7rem;
+  }
+
+  .available-card-price {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .available-card-desc {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .modal {
+    padding: 36px 24px;
+    max-height: 95vh;
+  }
+
+  .modal-title {
+    font-size: 1.3rem;
+    padding-right: 28px;
+  }
+
+  .available-grid {
+    gap: 48px;
+  }
+
+  .available-card-images {
+    aspect-ratio: 1;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* prevents iOS zoom on focus */
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 100px 0 36px;
+  }
+
+  .page-header-sub {
+    font-size: 0.6rem;
+  }
+
+  .available-section.section {
+    padding: 48px 0;
+  }
+
+  .available-grid {
+    gap: 40px;
+  }
+
+  .available-card {
+    gap: 20px;
+  }
+
+  .available-card-title {
+    font-size: 1.4rem;
+  }
+
+  .available-card-price {
+    font-size: 1.2rem;
+  }
+
+  .available-card-desc {
+    font-size: 0.82rem;
+  }
+
+  .modal {
+    padding: 32px 20px;
+    margin: 8px;
+  }
+
+  .modal-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 24px;
+  }
+
+  .btn-submit {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 360px) {
+  .page-header {
+    padding: 90px 0 30px;
+  }
+
+  .available-section.section {
+    padding: 36px 0;
+  }
+
+  .available-grid {
+    gap: 32px;
+  }
+
+  .available-card {
+    gap: 16px;
+  }
+
+  .available-card-title {
+    font-size: 1.2rem;
+  }
+
+  .available-card-meta {
+    font-size: 0.65rem;
+  }
+
+  .available-card-price {
+    font-size: 1.1rem;
+  }
+
+  .available-card-desc {
+    font-size: 0.78rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .modal {
+    padding: 24px 14px;
+    margin: 4px;
+  }
+
+  .modal-title {
+    font-size: 1.1rem;
+  }
+
+  .btn-inquire {
+    padding: 12px 20px;
+    font-size: 0.7rem;
+  }
+
+  .btn-submit {
+    font-size: 0.75rem;
+  }
+}
+
+/* Touch device improvements */
+@media (pointer: coarse) {
+  .btn-inquire {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-close {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    right: 8px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+  }
+}
+
+/* Safe area support for notched phones */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .modal-overlay {
+    padding-left: max(24px, env(safe-area-inset-left));
+    padding-right: max(24px, env(safe-area-inset-right));
+    padding-bottom: max(24px, env(safe-area-inset-bottom));
+  }
+}

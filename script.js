@@ -36,6 +36,12 @@ fadeEls.forEach(el => observer.observe(el));
 // Duplicate gallery images for seamless infinite scroll
 const galleryScroll = document.querySelector('.gallery-scroll');
 if (galleryScroll) {
-  const images = galleryScroll.innerHTML;
-  galleryScroll.innerHTML += images;
+  // Clone each image without lazy loading for the duplicates
+  const originalImages = Array.from(galleryScroll.querySelectorAll('img'));
+  originalImages.forEach(img => {
+    const clone = img.cloneNode(true);
+    clone.removeAttribute('loading');
+    clone.setAttribute('aria-hidden', 'true');
+    galleryScroll.appendChild(clone);
+  });
 }

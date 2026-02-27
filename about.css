@@ -1,0 +1,651 @@
+/* ===== About Hero ===== */
+.about-hero {
+  position: relative;
+  padding: 200px 0 100px;
+  text-align: center;
+  background: url('images/originals/IMG_4566.jpeg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.75) 0%,
+    rgba(10, 10, 10, 0.6) 50%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-sub {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 20px;
+}
+
+.about-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  line-height: 0.95;
+  margin-bottom: 28px;
+}
+
+.about-hero-role {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text);
+  line-height: 1.7;
+}
+
+.about-hero-location {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.about-hero-location i {
+  color: var(--color-accent);
+  margin-right: 6px;
+}
+
+/* ===== Artist Statement ===== */
+.about-statement {
+  background: var(--color-bg);
+}
+
+.statement-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.statement-image {
+  position: relative;
+}
+
+.statement-image img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+}
+
+.statement-image::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 60%;
+  height: 60%;
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  z-index: -1;
+}
+
+.statement-text .section-label {
+  position: relative;
+  padding-bottom: 16px;
+  margin-bottom: 28px;
+}
+
+.statement-text .section-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.statement-text p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.statement-text p:first-of-type {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--color-white);
+  margin-bottom: 28px;
+}
+
+/* ===== Stats Bar ===== */
+.stats-bar {
+  padding: 60px 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid rgba(201, 169, 110, 0.08);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.08);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--color-accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* ===== Exhibitions Timeline ===== */
+.about-exhibitions {
+  background: var(--color-bg);
+}
+
+.exhibitions-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+.column-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--color-white);
+  margin-bottom: 32px;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.column-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+/* ===== CV Lists ===== */
+.cv-list {
+  list-style: none;
+  padding: 0;
+}
+
+.cv-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.08);
+  position: relative;
+  padding-left: 20px;
+  transition: padding-left 0.3s ease;
+}
+
+.cv-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 28px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(201, 169, 110, 0.3);
+  transition: background 0.3s ease;
+}
+
+.cv-list li:hover {
+  padding-left: 28px;
+}
+
+.cv-list li:hover::before {
+  background: var(--color-accent);
+}
+
+.cv-list li:first-child {
+  padding-top: 0;
+}
+
+.cv-list li:first-child::before {
+  top: 6px;
+}
+
+.cv-title {
+  font-size: 0.95rem;
+  color: var(--color-white);
+  font-weight: 400;
+}
+
+.cv-detail {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.02em;
+}
+
+/* ===== Video Section ===== */
+.about-video {
+  background: var(--color-bg-alt);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.video-wrapper video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  max-height: 600px;
+}
+
+.video-text .section-label {
+  position: relative;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+}
+
+.video-text .section-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 1px;
+  background: var(--color-accent);
+}
+
+.video-lead {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+/* ===== Collections ===== */
+.about-collections {
+  background: var(--color-bg-alt);
+}
+
+.collections-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+
+/* Location tags */
+.collection-locations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.location-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  border: 1px solid rgba(201, 169, 110, 0.2);
+  border-radius: 2px;
+}
+
+/* ===== Education ===== */
+.about-education {
+  background: var(--color-bg);
+}
+
+/* ===== CTA ===== */
+.about-cta {
+  background: var(--color-bg-alt);
+  border-top: 1px solid rgba(201, 169, 110, 0.08);
+}
+
+.about-cta-text {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 36px;
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .about-hero {
+    padding: 160px 0 80px;
+  }
+
+  .statement-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .statement-image img {
+    aspect-ratio: 16/10;
+  }
+
+  .statement-image::after {
+    display: none;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .video-wrapper video {
+    max-height: 500px;
+  }
+
+  .exhibitions-columns,
+  .collections-columns {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 680px) {
+  .about-hero {
+    padding: 130px 0 56px;
+  }
+
+  .about-hero-sub {
+    font-size: 0.65rem;
+  }
+
+  .about-hero-role {
+    font-size: 0.9rem;
+    padding: 0 12px;
+  }
+
+  .about-hero-location {
+    font-size: 0.68rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .statement-text p:first-of-type {
+    font-size: 1.2rem;
+  }
+
+  .statement-text p {
+    font-size: 0.88rem;
+  }
+
+  .video-grid {
+    gap: 24px;
+  }
+
+  .video-lead {
+    font-size: 1.1rem;
+  }
+
+  .video-wrapper video {
+    max-height: 420px;
+  }
+
+  .stats-bar {
+    padding: 44px 0;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .column-title {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+  }
+
+  .cv-title {
+    font-size: 0.88rem;
+  }
+
+  .cv-detail {
+    font-size: 0.72rem;
+  }
+
+  .cv-list li {
+    padding: 18px 0 18px 18px;
+  }
+
+  .about-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-cta-buttons .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-cta-text {
+    font-size: 0.95rem;
+  }
+
+  .location-tag {
+    font-size: 0.62rem;
+    padding: 3px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero {
+    padding: 110px 0 44px;
+  }
+
+  .about-hero-role {
+    font-size: 0.85rem;
+    padding: 0 8px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .stats-bar {
+    padding: 36px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .exhibitions-columns,
+  .collections-columns {
+    gap: 32px;
+  }
+
+  .cv-list li {
+    padding: 14px 0 14px 16px;
+  }
+
+  .cv-list li::before {
+    width: 5px;
+    height: 5px;
+  }
+
+  .location-tag {
+    font-size: 0.58rem;
+    padding: 3px 8px;
+  }
+
+  .video-wrapper video {
+    max-height: 360px;
+  }
+
+  .video-lead {
+    font-size: 1rem;
+  }
+
+  .statement-image img {
+    aspect-ratio: 1;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-hero {
+    padding: 96px 0 36px;
+  }
+
+  .about-hero-sub {
+    font-size: 0.58rem;
+  }
+
+  .about-hero-role {
+    font-size: 0.8rem;
+  }
+
+  .about-hero-location {
+    font-size: 0.6rem;
+  }
+
+  .section {
+    padding: 36px 0;
+  }
+
+  .stats-bar {
+    padding: 28px 0;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.58rem;
+  }
+
+  .statement-text p:first-of-type {
+    font-size: 1.05rem;
+  }
+
+  .statement-text p {
+    font-size: 0.82rem;
+  }
+
+  .column-title {
+    font-size: 1.05rem;
+  }
+
+  .cv-title {
+    font-size: 0.82rem;
+  }
+
+  .cv-detail {
+    font-size: 0.68rem;
+  }
+
+  .video-wrapper video {
+    max-height: 300px;
+  }
+
+  .video-lead {
+    font-size: 0.92rem;
+  }
+
+  .about-cta-text {
+    font-size: 0.85rem;
+  }
+
+  .about-cta-buttons .btn {
+    font-size: 0.7rem;
+    padding: 12px 24px;
+  }
+
+  .location-tag {
+    font-size: 0.55rem;
+    padding: 2px 6px;
+  }
+}
+
+/* Touch device improvements */
+@media (pointer: coarse) {
+  .cv-list li {
+    min-height: 44px;
+  }
+
+  .about-cta-buttons .btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Safe area support */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .about-hero {
+    padding-top: calc(160px + env(safe-area-inset-top));
+  }
+}
